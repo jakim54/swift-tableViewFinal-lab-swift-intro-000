@@ -28,6 +28,7 @@ class FactTableViewController: UITableViewController {
     
     override func tableView(_: UITableView, cellForRowAtIndexPath indexPath: indexPath) -> UITableViewCell {
         // need to implement this
+        // call indexPath = indexPath[row]
         return UITableViewCell
     }
     
