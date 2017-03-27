@@ -26,10 +26,13 @@ class FactTableViewController: UITableViewController {
         return planet.facts.count
     }
     
-    override func tableView(_: UITableView, cellForRowAtIndexPath indexPath: indexPath) -> UITableViewCell {
-        // need to implement this
-        // call indexPath = indexPath[row]
-        return UITableViewCell
+    override func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: factCellIdentifier, for: indexPath) as! FactTableViewCell
+        let currentFact = planet.facts[indexPath.row]
+        
+        cell.factTextView.text = currentFact
+        
+        return cell
     }
     
 }

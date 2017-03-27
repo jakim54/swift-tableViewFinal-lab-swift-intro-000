@@ -47,6 +47,27 @@ class PlanetTableViewController: UITableViewController {
         return planets.count
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: planetCellIdentifier, for: indexPath) as! PlanetTableViewCell
+        let planet = planets[indexPath.row]
+        
+        cell.planetNameLabel.text = planet.name
+        cell.numberOfDaysFullOrbital.text = "\(planet.fullOrbit) days (full orbit)"
+        cell.numberOfFacts.text = "\(planet.facts.count) facts"
+        
+        switch planet.numberOfMoons {
+        case 0:
+            cell.numberOfMoonsLabel.text = "No Moons"
+        case 1:
+            cell.numberOfMoonsLabel.text = "1 Moon"
+        default:
+            cell.numberOfMoonsLabel.text = "\(planet.numberOfMoons) Moons"
+        }
+        
+        return cell
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! FactTableViewController
         
