@@ -20,7 +20,7 @@ class PlanetTableVCSpec: QuickSpec {
             describe("planetCellIdentifier property") {
                 it("Should be set to the value 'PlanetCell' on declaration") {
                     
-                    let expectedIdentifier = "PlanetCell"
+                    let expectedIdentifier = "planetCell"
                     
                     expect(testVC.planetCellIdentifier).to(equal(expectedIdentifier))
                     

@@ -23,11 +23,11 @@ class PlanetTableViewController: UITableViewController {
         let earthFacts = [
             "Earth is the only planet not named after a god.",
             "Earth has a powerful magnetic field.",
-            "The Earth was once believed to be the center of the universe."
+            "Earth was once believed to be the center of the universe."
         ]
         
         let marsFacts = [
-            "Mars and Eath have approximately the same landmass.",
+            "Mars and Earth have approximately the same landmass.",
             "Mars is home to the tallest mountain in the solar system.",
             "Pieces of Mars have fallen to Earth."
         ]
